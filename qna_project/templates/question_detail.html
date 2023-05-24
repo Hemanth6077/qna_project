@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Detail</title>
+</head>
+<body>
+    <h2>Question: {{ question.title }}</h2>
+    <p>{{ question.content }}</p>
+    <hr>
+    <h3>Answers:</h3>
+    {% for answer in answers %}
+        <p>{{ answer.content }}</p>
+        <hr>
+    {% empty %}
+        <p>No answers available.</p>
+    {% endfor %}
+    <br>
+    <a href="/qna/">Back to Home</a>
+</body>
+</html>
